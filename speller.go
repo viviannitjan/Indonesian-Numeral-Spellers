@@ -1,6 +1,9 @@
-package main
+package speller
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 func satuan(i int) string {
 	switch i {
@@ -77,6 +80,79 @@ func spellAngka(i int) string {
 	return result
 }
 
+func toAngka(s string, i int) int {
+	switch s {
+	case "satu":
+		return i + 1
+	case "dua":
+		return i + 2
+	case "tiga":
+		return i + 3
+	case "empat":
+		return i + 4
+	case "lima":
+		return i + 5
+	case "enam":
+		return i + 6
+	case "tujuh":
+		return i + 7
+	case "delapan":
+		return i + 8
+	case "sembilan":
+		return i + 9
+	case "sepuluh":
+		return i + 10
+	case "sebelas":
+		return i + 11
+	case "seratus":
+		return i + 100
+	case "belas":
+		return i + 10
+	case "puluh":
+		j := i % 10
+		i = i - j
+		i = i + j*10
+		return i
+	case "ratus":
+		j := i % 10
+		i = i - j
+		i = i + j*100
+		return i
+	case "seribu":
+		return i + 1000
+	case "ribu":
+		j := i % 1000
+		i = i - j
+		i = i + j*1000
+		return i
+	case "juta":
+		j := i % 1000000
+		i = i - j
+		i = i + j*1000000
+		return i
+	case "milyar":
+		j := i % 1000000
+		i = i - j
+		i = i + j*1000000000
+		return i
+	}
+	return 0
+}
+
+func prosesString(s string) int {
+	result := 0
+	i := 0
+	arr := strings.Split(s, " ")
+	for i < len(arr) {
+		// fmt.Printf(arr[i])
+		// fmt.Printf("%d", result)
+		result = toAngka(arr[i], result)
+		i++
+	}
+	return result
+}
+
 func main() {
 	fmt.Println(spellAngka(1465431392))
+	fmt.Printf("%d", prosesString("dua ribu sembilan belas"))
 }
