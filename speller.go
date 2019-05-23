@@ -1,7 +1,6 @@
-package speller
+package main
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -74,7 +73,11 @@ func spellAngka(i int) string {
 			i = i % 1000
 		} else {
 			result = result + ratusan(i)
-			i = 0
+			if i > 100 {
+				i = i % 100
+			} else {
+				i = 0
+			}
 		}
 	}
 	return result
@@ -152,7 +155,7 @@ func prosesString(s string) int {
 	return result
 }
 
-func main() {
-	fmt.Println(spellAngka(1465431392))
-	fmt.Printf("%d", prosesString("dua ribu sembilan belas"))
-}
+// func main() {
+// 	fmt.Println(spellAngka(54321122))
+// 	fmt.Printf("%d", prosesString("dua ribu sembilan belas"))
+// }
