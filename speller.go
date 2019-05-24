@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"strings"
 )
 
@@ -48,7 +49,7 @@ func ratusan(i int) string {
 	if i/100 == 1 {
 		return "seratus "
 	} else if i/100 > 1 {
-		return satuan(i/100) + " ratus " + puluhan(i%100)
+		return satuan(i/100) + " ratus "
 	} else {
 		return puluhan(i)
 	}
@@ -78,6 +79,8 @@ func spellAngka(i int) string {
 			} else {
 				i = 0
 			}
+			fmt.Println(result)
+			fmt.Println(i)
 		}
 	}
 	return result

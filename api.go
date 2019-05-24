@@ -42,7 +42,7 @@ func spellFunc(w http.ResponseWriter, r *http.Request) {
 	// fmt.Println(str)
 	num, _ := strconv.Atoi(str)
 	res := spellAngka(num)
-	// fmt.Println(res)
+	fmt.Println(res)
 	ret := Text{Teks: res}
 	json.NewEncoder(w).Encode(ret)
 	// respondWithJSON(w, http.statusOK)
@@ -52,7 +52,11 @@ func readFunc(w http.ResponseWriter, r *http.Request) {
 	var baca Text
 	fmt.Println("read")
 	json.NewDecoder(r.Body).Decode(&baca) //catch data from post req and Post to our struct model
+	fmt.Println(baca)
 	res := prosesString(baca.Teks)
+
+	fmt.Println(baca.Teks)
+	fmt.Println(res)
 	ret := Angka{Number: res}
 	json.NewEncoder(w).Encode(ret)
 }
