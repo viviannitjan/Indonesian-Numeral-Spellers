@@ -51,26 +51,3 @@ STATUS CODE 200
     "number" : 1997
 }
 ```
-
-## Bonus
-Buatlah sebuah aplikasi mobile atau website dengan tampilan menarik, yang menggunakan kedua API tersebut. Semakin menarik tampilan, semakin tinggi poin yang akan didapat.
-
-Teknologi yang direkomendasikan : **React.js**
-
-## Penilaian
-- Kebenaran fungsionalitas program.
-- Kebenaran API.
-- Pemahaman tentang bahasa pemrograman **Go** serta **REST API**.
-- Kerapihan _repository_ & kode, termasuk **README** (fungsi program, contoh request & response dari setiap endpoint) dan **arsitektur kode Go**.
-- UI (bonus).
-
-Nilai maksimum yang bisa didapatkan adalah **1600 (2600 dengan bonus)** poin. <br>
-_(Seribu Enam Ratus)_
-
-## Referensi Pengerjaan _(sangat disarankan untuk diikuti dengan baik)_
-1. https://golang.org/doc/install
-2. https://github.com/golang/go/wiki/SettingGOPATH
-3. https://golang.org/doc/code.html#Introduction
-4. https://tour.golang.org/welcome/1
-5. https://openclassrooms.com/en/courses/3432056-build-your-web-projects-with-rest-apis/3496011-identify-examples-of-rest-apis
-6. https://www.codementor.io/codehakase/building-a-restful-api-with-golang-a6yivzqdo
